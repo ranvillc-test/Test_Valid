@@ -4,7 +4,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 
-public class QuestionHome implements Question{
+public class QuestionHome implements Question<Object>{
 	
 	private String title;
 
@@ -12,7 +12,6 @@ public class QuestionHome implements Question{
 		// TODO Auto-generated constructor stub
 		this.title= title;
 	}
-
 
 	@Override
 	public Object answeredBy(Actor actor) {

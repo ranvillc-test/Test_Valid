@@ -51,7 +51,6 @@ public class Home_Step {
 	public void validate_Home_Page(String title) throws InterruptedException {
 		
 		theActorInTheSpotlight().should(GivenWhenThen.seeThat(
-				
 				QuestionHome.validateTitle(title))
 				
 				);

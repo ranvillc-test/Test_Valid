@@ -22,7 +22,7 @@ Feature: Reservations
 		
 		Examples: 
       | vclient   | fendpage    											| username  |
-      | Antonio  	| https://www.phptravels.net/	  	  | Demo	  	|
+      | Antonio  	| https://www.phptravels.net/	  	  | Demo    	|
 		
 	
 	

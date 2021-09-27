@@ -15,4 +15,5 @@ public class HomePage extends PageObject{
 	
 	public static final Target CLICK_FE = Target.the("Homepage Front-End").located(By.xpath("//small[normalize-space()='http://www.phptravels.net']"));
 	
+	
 }

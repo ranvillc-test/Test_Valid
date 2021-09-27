@@ -154,7 +154,7 @@
             <a href="requirement_type_feature.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 25-09-2021 12:33</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 27-09-2021 03:24</span>
     <br style="clear:left"/>
 </div>
 
@@ -201,9 +201,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">Login
+                                <span class="failing-color">Login
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -217,27 +217,79 @@
 
     <div class="clr"></div>
 
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given the user &lt;vclient&gt; is in the home page<br>When the user looks for option Front-End Home Page<br>And the user enters the Front-End Home Page &lt;fendpage&gt;<br>And the user enters credentials and logs in<br>Then the user validates that the username &lt;username&gt; on the user home page</div>
+    </div>
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Assertion error: Expected question usernameExpected: is (true) but: was (false)</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>stepsdefinitions.Login_Step.validate_Username(Login_Step.java:88)<br />✽.the user validates that the username Demois on the user home page(src/test/resources/features/reserva.feature:21)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource7164822667628193878.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="5d26e2876aad434a8a90318664c8168c6994a10b84e2d2372ae73d8c204dc72a.png" title=" Example: null" width="1366"/>
-                <img src="5d26e2876aad434a8a90318664c8168c6994a10b84e2d2372ae73d8c204dc72a.png" title=" Given the user Antonio is in the home page" width="1366"/>
-                <img src="5d26e2876aad434a8a90318664c8168c6994a10b84e2d2372ae73d8c204dc72a.png" title=" Antonio opens the Home page" width="1366"/>
-                <img src="5d26e2876aad434a8a90318664c8168c6994a10b84e2d2372ae73d8c204dc72a.png" title=" Given the user Antonio is in the home page (completed)" width="1366"/>
-                <img src="f6dba35bfdc393983af6ff6a540cc481140b6c9c25b58f2c2cead1216f1bcbd9.png" title=" When the user looks for option Front-End Home Page" width="1366"/>
-                <img src="f6dba35bfdc393983af6ff6a540cc481140b6c9c25b58f2c2cead1216f1bcbd9.png" title=" Antonio looks task" width="1366"/>
-                <img src="d87f6f3c729e89a7a1dc2ecf9aeb2898e0741953486b95d8f185de4c3cf2b63a.png" title=" When the user looks for option Front-End Home Page (completed)" width="1366"/>
-                <img src="a1ff0cc7c87b3f036e853ae5aabfb65477de689b67d4d175d47f47872b7e8e4a.png" title=" And the user enters the Front-End Home Page https://www.phptravels.net/" width="1366"/>
-                <img src="a1ff0cc7c87b3f036e853ae5aabfb65477de689b67d4d175d47f47872b7e8e4a.png" title=" Antonio click fe task" width="1366"/>
-                <img src="a1ff0cc7c87b3f036e853ae5aabfb65477de689b67d4d175d47f47872b7e8e4a.png" title=" Antonio clicks on Homepage Front-End" width="1366"/>
-                <img src="a1ff0cc7c87b3f036e853ae5aabfb65477de689b67d4d175d47f47872b7e8e4a.png" title=" Antonio click fe task (completed)" width="1366"/>
-                <img src="3175b0f1ac9c8ca27d90ec94b23f6b2916de45b048b166899bc60ca3848f2a77.png" title=" Then question url f end" width="1366"/>
-                <img src="3175b0f1ac9c8ca27d90ec94b23f6b2916de45b048b166899bc60ca3848f2a77.png" title=" And the user enters the Front-End Home Page https://www.phptravels.net/ (completed)" width="1366"/>
-                <img src="3175b0f1ac9c8ca27d90ec94b23f6b2916de45b048b166899bc60ca3848f2a77.png" title=" And the user enters credentials and logs in" width="1366"/>
-                <img src="3175b0f1ac9c8ca27d90ec94b23f6b2916de45b048b166899bc60ca3848f2a77.png" title=" Then the user validates that the username Demo on the user home page" width="1366"/>
-                <img src="3175b0f1ac9c8ca27d90ec94b23f6b2916de45b048b166899bc60ca3848f2a77.png" title=" Example: null (completed): <span class='success-color'>SUCCESS</span>" width="1366"/>
+                <img src="4e65fce13b5e7e3984cab02484af4211555106e939e20ce54ed71a62d45a4727.png" title=" Example: {vclient=Antonio, fendpage=https://www.phptravels.net/, username=Demois}" width="1366"/>
+                <img src="4e65fce13b5e7e3984cab02484af4211555106e939e20ce54ed71a62d45a4727.png" title=" Given the user Antonio is in the home page" width="1366"/>
+                <img src="4e65fce13b5e7e3984cab02484af4211555106e939e20ce54ed71a62d45a4727.png" title=" Antonio opens the Home page" width="1366"/>
+                <img src="4e65fce13b5e7e3984cab02484af4211555106e939e20ce54ed71a62d45a4727.png" title=" Given the user Antonio is in the home page (completed)" width="1366"/>
+                <img src="8d8850315ae69e8d2f7bcd0c3d759e0414f451068a6598751433aa98bc54d56a.png" title=" When the user looks for option Front-End Home Page" width="1366"/>
+                <img src="8d8850315ae69e8d2f7bcd0c3d759e0414f451068a6598751433aa98bc54d56a.png" title=" Antonio looks task" width="1366"/>
+                <img src="8d8850315ae69e8d2f7bcd0c3d759e0414f451068a6598751433aa98bc54d56a.png" title=" When the user looks for option Front-End Home Page (completed)" width="1366"/>
+                <img src="3f7db7d21c8a1adbf9d405c6920f6a080fd5d8d926cf153cbdfc04c9aa67254a.png" title=" And the user enters the Front-End Home Page https://www.phptravels.net/" width="1366"/>
+                <img src="3f7db7d21c8a1adbf9d405c6920f6a080fd5d8d926cf153cbdfc04c9aa67254a.png" title=" Antonio front end page task" width="1366"/>
+                <img src="3f7db7d21c8a1adbf9d405c6920f6a080fd5d8d926cf153cbdfc04c9aa67254a.png" title=" Antonio clicks on Homepage Front-End" width="1366"/>
+                <img src="3f7db7d21c8a1adbf9d405c6920f6a080fd5d8d926cf153cbdfc04c9aa67254a.png" title=" Antonio front end page task (completed)" width="1366"/>
+                <img src="1c5c1d8529de67846c902d70e5cde6da00edb2339208419b3dd35ab9cb8398f2.png" title=" Then question url f end" width="1366"/>
+                <img src="1c5c1d8529de67846c902d70e5cde6da00edb2339208419b3dd35ab9cb8398f2.png" title=" Antonio clicks on Cookies" width="1366"/>
+                <img src="1c5c1d8529de67846c902d70e5cde6da00edb2339208419b3dd35ab9cb8398f2.png" title=" Then question url f end (completed)" width="1366"/>
+                <img src="1c5c1d8529de67846c902d70e5cde6da00edb2339208419b3dd35ab9cb8398f2.png" title=" And the user enters the Front-End Home Page https://www.phptravels.net/ (completed)" width="1366"/>
+                <img src="330e6dac3ca73c79916cef7065d1ba20367addae021e772bf1ada90e64a9074a.png" title=" And the user enters credentials and logs in" width="1366"/>
+                <img src="330e6dac3ca73c79916cef7065d1ba20367addae021e772bf1ada90e64a9074a.png" title=" Antonio login task" width="1366"/>
+                <img src="330e6dac3ca73c79916cef7065d1ba20367addae021e772bf1ada90e64a9074a.png" title=" Antonio clicks on Option Login" width="1366"/>
+                <img src="931f33841769ccd90362912506e93a8319ac533b760b565f046130f924bbe825.png" title=" Antonio enters 'user@phptravels.com' into input email" width="1366"/>
+                <img src="b9fde3b368d0b9e6d2d879eb15e6af35114fe4cbfa15475878d2b9a386375432.png" title=" Antonio enters 'demouser' into input password" width="1366"/>
+                <img src="c9716a71bdb707f82d627f3e03951379f5092c62a2d3aece8c82d3cdd913fd6c.png" title=" Antonio clicks on Button Login" width="1366"/>
+                <img src="c9716a71bdb707f82d627f3e03951379f5092c62a2d3aece8c82d3cdd913fd6c.png" title=" Antonio login task (completed)" width="1366"/>
+                <img src="c9716a71bdb707f82d627f3e03951379f5092c62a2d3aece8c82d3cdd913fd6c.png" title=" And the user enters credentials and logs in (completed)" width="1366"/>
+                <img src="ad0394940ee5cd5062ad19c267d5994cf4529e996346eb37d7d8fcec456b06d0.png" title=" Then the user validates that the username Demois on the user home page" width="1366"/>
+                <img src="ad0394940ee5cd5062ad19c267d5994cf4529e996346eb37d7d8fcec456b06d0.png" title=" Then question username: <span class='failing-color'>FAILURE</span>" width="1366"/>
             </div>
         </div>
 

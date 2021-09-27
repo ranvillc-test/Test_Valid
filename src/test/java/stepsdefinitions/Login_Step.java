@@ -11,9 +11,10 @@ import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import questions.QuestionHome;
 import questions.QuestionUrlFEnd;
-import task.Click_FE_Task;
+import questions.QuestionUsername;
+import task.FrontEndPage_Task;
+import task.Login_Task;
 import task.Looks_Task;
 import userinterfaces.HomePage;
 
@@ -21,7 +22,7 @@ public class Login_Step {
 
 	private String nActor;
 	private HomePage homePage;
-	private String username;
+	private String email;
 	private String password;
 
 	@Before
@@ -46,58 +47,49 @@ public class Login_Step {
 
 		theActorCalled(nActor).attemptsTo(
 
-				Looks_Task.s_Credential()
+				Looks_Task.s_Credential());
 
-		); // Buscar las credenciasles
-
-		String text = HomePage.CREDENTIAL_FE.resolveFor(theActorCalled(nActor)).getText(); // Capturar credenciales
-		// System.out.println("Texto encontrado: "+text);
-
-		String[] credentials = text.split("\\n");
-
-		for (String string : credentials) { // depurar credenciales
-			if (string.contains("Email")) {
-				String[] var = string.split(" ");
-				username = var[1];
-			} else if (string.contains("Password")) {
-				String[] var = string.split(" ");
-				password = var[1];
-			}
-		}
-
-		// System.out.println("Username: "+username);
-		// System.out.println("Passw: "+ password);
+		this.email = Looks_Task.email;
+		this.password = Looks_Task.pw;
 
 	}
 
+	@SuppressWarnings("unchecked")
 	@When("^the user enters the Front-End Home Page (.*)$")
 	public void enters_Front_End_Home_Page(String url) throws InterruptedException {
 
 		theActorCalled(nActor).attemptsTo(
 
-				Click_FE_Task.c_Front_End()
+				FrontEndPage_Task.c_Front_End()
 
 		);
 
 		theActorInTheSpotlight().should(GivenWhenThen.seeThat(
 
-				QuestionUrlFEnd.validateUrlFEnd(url))
+				QuestionUrlFEnd.validateUrlFEnd(url)
 
-		);
+		));
 
 	}
 
 	@When("^the user enters credentials and logs in$")
 	public void log_In_Front_End_Home_Page() throws InterruptedException {
 
-		System.out.println("pending to validate");
+		theActorCalled(nActor).attemptsTo(Login_Task.send_Credentials(email, password));
+
 	}
 
 	@Then("^the user validates that the username (.*) on the user home page$")
 	public void validate_Username(String username) throws InterruptedException {
+		
+		
 
-		System.out.println("pending to validate");
+		theActorInTheSpotlight().should(GivenWhenThen.seeThat(
 
+				QuestionUsername.validateUrlFEnd(username)
+
+		));
+		
 	}
 
 }

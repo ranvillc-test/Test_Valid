@@ -1,1 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Reservations" skipped="0" tests="1" time="27.53" timestamp="2021-09-25 12:06:15"><testcase name="Login"/></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Reservations" skipped="0" tests="1" time="15.24" timestamp="2021-09-27 03:24:15"><testcase name="Login"><failure message="Expected question username&#10;Expected: is &lt;true&gt;&#10;     but: was &lt;false&gt;" type="java.lang.AssertionError">Expected question username
+Expected: is &lt;true&gt;
+     but: was &lt;false&gt;</failure><system-err>Expected question username
+Expected: is &lt;true&gt;
+     but: was &lt;false&gt;&#13;
+stepsdefinitions.Login_Step.validate_Username(Login_Step.java:88)&#13;
+✽.the user validates that the username Demois on the user home page(src/test/resources/features/reserva.feature:21)&#13;
+</system-err></testcase></testsuite>
