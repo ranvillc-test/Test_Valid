@@ -9,7 +9,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
 		
-		features= {"src/test/resources/features/reserva.feature"},
+		features= {"src/test/resources/features/Bookings.feature"},
 		glue= "stepsdefinitions",
 		tags = {"@tag1,@tag2"}
 		

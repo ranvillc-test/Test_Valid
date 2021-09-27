@@ -1,5 +1,5 @@
 @tag
-Feature: Reservations
+Feature: Bookings
 
 	@tag1
   Scenario Outline: Home Page

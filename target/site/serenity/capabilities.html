@@ -104,7 +104,7 @@
             $("#requirements-tabs").tabs();
             $("#test-tabs").tabs();
 
-            var requirementsTree = [{"text":"Reservations","type":"feature","href":"feature_reservations.html","nodes":[],"selectable":false,"tags":["\u003ci class\u003d\u0027fa fa-times-circle failure-icon \u0027 title\u003d\u0027FAILURE\u0027\u003e\u003c/i\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e2 scenarios\u003c/span\u003e"]}];
+            var requirementsTree = [{"text":"Bookings","type":"feature","href":"feature_bookings.html","nodes":[],"selectable":false,"tags":["\u003ci class\u003d\u0027fa fa-check-circle-o success-icon \u0027 title\u003d\u0027SUCCESS\u0027\u003e\u003c/i\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e2 scenarios\u003c/span\u003e"]}];
 
             $('#tree').treeview({
                 data: requirementsTree,
@@ -168,7 +168,7 @@
             <a href="requirement_type_feature.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 26-09-2021 23:11</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 27-09-2021 09:28</span>
     <br style="clear:left"/>
 </div>
 
@@ -216,10 +216,28 @@
                                                         </tr>
                                                         <tr>
                                                             <td style="width:99%;" class="toc-title"><a href="#9d6322c1f4d9d3f38aed8bfbe0b2bcadf66ad82c008476fa62541fa069138e94">Login</a>
-                                                                     (1 example)
+
 
                                                             </td>
-                                                            <td style="width:1%;"><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i>
+                                                            <td style="width:1%;"><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i>
+                                                               
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width:99%;" class="toc-title"><a href="#d2c7f6be09a496f48dbe6a88dd175a28a4708cf76a89142ffb954be296b78ecf">Home Page</a>
+
+
+                                                            </td>
+                                                            <td style="width:1%;"><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i>
+                                                               
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width:99%;" class="toc-title"><a href="#9d6322c1f4d9d3f38aed8bfbe0b2bcadf66ad82c008476fa62541fa069138e94">Login</a>
+
+
+                                                            </td>
+                                                            <td style="width:1%;"><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i>
                                                                
                                                             </td>
                                                         </tr>
@@ -258,7 +276,7 @@
 
 
                                                 <div class="scenario-docs card" id="9d6322c1f4d9d3f38aed8bfbe0b2bcadf66ad82c008476fa62541fa069138e94">
-                                                    <div class="scenario-docs card-header failure" style="min-height:1.5em;">
+                                                    <div class="scenario-docs card-header success" style="min-height:1.5em;">
                                                         <div>
                                                             <span class="scenario-heading">
                                                                 Login
@@ -266,7 +284,7 @@
                                                             <span class="scenario-result-icon">
                                                                 
 
-                                                                    <i class='fa fa-times-circle failure-icon ' title='FAILURE'></i>
+                                                                    <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i>
                                                             </span>
                                                         </div>
                                                         <div class="scenario-report-badges">
@@ -280,15 +298,62 @@
                                                             <p>And the user enters credentials and logs in</p>
                                                             <p>Then the user validates that the username {username} on the user home page</p>
                                                         <div class="examples">
-                                                            <p><div class='example-table-in-scenario'><table>
-<thead>
-<tr><th>vclient</th><th>fendpage</th><th>username</th></tr>
-</thead>
-<tbody>
-<tr><td>Antonio</td><td>https://www.phptravels.net/</td><td>Demois</td></tr>
-</tbody>
-</table></div>
-</p>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="d2c7f6be09a496f48dbe6a88dd175a28a4708cf76a89142ffb954be296b78ecf">
+                                                    <div class="scenario-docs card-header success" style="min-height:1.5em;">
+                                                        <div>
+                                                            <span class="scenario-heading">
+                                                                Home Page
+                                                            </span>
+                                                            <span class="scenario-result-icon">
+                                                                
+
+                                                                    <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="scenario-report-badges">
+                                                                <span class="scenario-report-badge" style="float:right;"><a href='bookings_home_page.html' class='badge more-details'>Test Results</a></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p>Given the user {client} is on the browser</p>
+                                                            <p>When the user enters the home page</p>
+                                                            <p>Then the user validates that he is on the home page {home}</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="9d6322c1f4d9d3f38aed8bfbe0b2bcadf66ad82c008476fa62541fa069138e94">
+                                                    <div class="scenario-docs card-header success" style="min-height:1.5em;">
+                                                        <div>
+                                                            <span class="scenario-heading">
+                                                                Login
+                                                            </span>
+                                                            <span class="scenario-result-icon">
+                                                                
+
+                                                                    <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="scenario-report-badges">
+                                                                <span class="scenario-report-badge" style="float:right;"><a href='bookings_login.html' class='badge more-details'>Test Results</a></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p>Given the user {vclient} is in the home page</p>
+                                                            <p>When the user looks for option Front-End Home Page</p>
+                                                            <p>And the user enters the Front-End Home Page {fendpage}</p>
+                                                            <p>And the user enters credentials and logs in</p>
+                                                            <p>Then the user validates that the username {username} on the user home page</p>
+                                                        <div class="examples">
                                                         </div>
 
                                                     </div>
@@ -308,10 +373,10 @@
                                             </div>
                                             <script>
 
-                                                var labels = ['50%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '50%', ' ', ' ', ' ', ' ', ' '];
+                                                var labels = ['100%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
                                                 // Our series array that contains series objects or in this case series data arrays
 
-                                                var series = [{meta: 'Passing tests (automated)', value: 1}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 1}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
+                                                var series = [{meta: 'Passing tests (automated)', value: 4}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
 
                                                 // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
                                                 // as you saw in the previous example
@@ -352,8 +417,8 @@
                                                                         <a href="result_success.html"><i
                                                                                 class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing</a>
                                                                     </td>
-                                                <td class="automated-stats">1</td>
-                                                <td class="automated-stats">50%</td>
+                                                <td class="automated-stats">4</td>
+                                                <td class="automated-stats">100%</td>
                                             </tr>
                                             <tr>
                                                                     <td class="aggregate-result-count"><i
@@ -383,12 +448,12 @@
                                             </tr>
 
                                             <tr>
-                                                                    <td class="aggregate-result-count indented-error-category">
-                                                                        <a href="result_failure.html"><i
-                                                                                class='fa fa-times-circle failure-icon'></i>&nbsp;Failed</a>
-                                                                    </td>
-                                                <td class="automated-stats">1</td>
-                                                <td class="automated-stats">50%</td>
+                                                                <td class="aggregate-result-count indented-error-category">
+                                                                    <i
+                                                                            class='fa fa-times-circle failure-icon'></i>&nbsp;Failed
+                                                                </td>
+                                                <td class="automated-stats">0</td>
+                                                <td class="automated-stats"> </td>
                                             <tr>
                                                                 <td class="aggregate-result-count indented-error-category">
                                                                     <i
@@ -406,7 +471,7 @@
                                             </tr>
                                             <tr class="summary-stats">
                                                 <td class="aggregate-result-count">Total</td>
-                                                <td class="automated-stats">2</td>
+                                                <td class="automated-stats">4</td>
                                                 <td class="automated-stats"></td>
                                             </tr>
                                             </tbody>
@@ -428,10 +493,10 @@
                                                     </thead>
                                                     <tbody>
                                                     <tr>
-                                                        <td>29s</td>
-                                                        <td> 4h  13m 10s</td>
-                                                        <td>14s</td>
-                                                        <td>15s</td>
+                                                        <td>59s</td>
+                                                        <td> 3m 12s</td>
+                                                        <td>10s</td>
+                                                        <td>18s</td>
                                                         <td>14s</td>
                                                     </tr>
                                                     </tbody>
@@ -466,7 +531,7 @@
 
 
             <td> 
-                <a href="feature_reservations.html">Reservations</a></span>
+                <a href="feature_bookings.html">Bookings</a></span>
             </td>
             <td> 
                 
@@ -474,8 +539,8 @@
             <td>2</td>
             <td>0</td>
             <td>
-                <span class="status_icon"><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></span>
-                <span style="display:none">3</span>
+                <span class="status_icon"><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></span>
+                <span style="display:none">1</span>
             </td>
 
             <td width="165px" style="padding:0px;">
@@ -484,18 +549,18 @@
 <table>
     <tr>
         <td width="40px" style="padding-top:4px;">
-            <div class="small" style="text-align:right;">50%</div>
+            <div class="small" style="text-align:right;">100%</div>
         </td>
         <td style="min-width:12.5em;">
             <div class="progress">
                 <div class="progress-bar" role="progressbar"
-                     style="width: 50%; background-color:#30cb23;"
-                     aria-valuenow="1"
+                     style="width: 100%; background-color:#30cb23;"
+                     aria-valuenow="2"
                      aria-valuemin="0"
                      aria-valuemax="2"
                      title="  - Total tests: 2
-  - Passing tests: 1 (50%)
-  - Failing tests: 1 (50%)
+  - Passing tests: 2 (100%)
+  - Failing tests: 0 (0%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -507,8 +572,8 @@
                      aria-valuemin="0"
                      aria-valuemax="2"
                      title="  - Total tests: 2
-  - Passing tests: 1 (50%)
-  - Failing tests: 1 (50%)
+  - Passing tests: 2 (100%)
+  - Failing tests: 0 (0%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -520,8 +585,8 @@
                      aria-valuemin="0"
                      aria-valuemax="2"
                      title="  - Total tests: 2
-  - Passing tests: 1 (50%)
-  - Failing tests: 1 (50%)
+  - Passing tests: 2 (100%)
+  - Failing tests: 0 (0%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -533,21 +598,21 @@
                      aria-valuemin="0"
                      aria-valuemax="2"
                      title="  - Total tests: 2
-  - Passing tests: 1 (50%)
-  - Failing tests: 1 (50%)
+  - Passing tests: 2 (100%)
+  - Failing tests: 0 (0%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
   - Ignored or skipped tests: 0 (0%)">
                 </div>
                 <div class="progress-bar" role="progressbar"
-                     style="width: 50%; background-color:#f8001f;"
-                     aria-valuenow="1"
+                     style="width: 0%; background-color:#f8001f;"
+                     aria-valuenow="0"
                      aria-valuemin="0"
                      aria-valuemax="2"
                      title="  - Total tests: 2
-  - Passing tests: 1 (50%)
-  - Failing tests: 1 (50%)
+  - Passing tests: 2 (100%)
+  - Failing tests: 0 (0%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -559,8 +624,8 @@
                      aria-valuemin="0"
                      aria-valuemax="2"
                      title="  - Total tests: 2
-  - Passing tests: 1 (50%)
-  - Failing tests: 1 (50%)
+  - Passing tests: 2 (100%)
+  - Failing tests: 0 (0%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -572,8 +637,8 @@
                      aria-valuemin="0"
                      aria-valuemax="2"
                      title="  - Total tests: 2
-  - Passing tests: 1 (50%)
-  - Failing tests: 1 (50%)
+  - Passing tests: 2 (100%)
+  - Failing tests: 0 (0%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -614,24 +679,47 @@
                                                             <a href="reservations_home_page.html">Home Page</a>
                                                     </td>
                                                     <td>3</td>
-                                                    <td>23:11:05</td>
-                                                    <td>00:14</td>
+                                                    <td>09:28:52</td>
+                                                    <td>00:13</td>
                                                     <td>
                                                             <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
                                                                 style="display:none">SUCCESS</span>
                                                     </td>
                                                 </tr>
-                                                <tr class="scenario-result FAILURE">
+                                                <tr class="scenario-result SUCCESS">
                                                     <td>
                                                             <a href="reservations_login.html">Login</a>
-                                                               (1 example)
                                                     </td>
                                                     <td>5</td>
-                                                    <td>03:24:15</td>
-                                                    <td>00:15</td>
+                                                    <td>09:29:05</td>
+                                                    <td>00:17</td>
                                                     <td>
-                                                            <i class='fa fa-times-circle failure-icon ' title='FAILURE'></i> <span
-                                                                style="display:none">FAILURE</span>
+                                                            <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                                style="display:none">SUCCESS</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="bookings_home_page.html">Home Page</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>09:31:53</td>
+                                                    <td>00:10</td>
+                                                    <td>
+                                                            <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                                style="display:none">SUCCESS</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="bookings_login.html">Login</a>
+                                                    </td>
+                                                    <td>5</td>
+                                                    <td>09:32:04</td>
+                                                    <td>00:18</td>
+                                                    <td>
+                                                            <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                                style="display:none">SUCCESS</span>
                                                     </td>
                                                 </tr>
                                                 </tbody>

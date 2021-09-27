@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html">
-
-
+<html>
 <head>
     <meta charset="UTF-8"/>
-    <title>Features</title>
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Serenity Reports</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
@@ -62,70 +65,46 @@
 
 
 
-    <script>
 
-        $(document).ready(function () {
+    <script class="code" type="text/javascript">$(document).ready(function () {
 
-            var scenarioTable = $('.scenario-result-table').DataTable({
-
-                "order": [],
-                "language": {
-                    searchPlaceholder: "Filter",
-                    search: ""
-                }
-            });
-
-            $('.example-table table').DataTable({
-                searching: false,
-                ordering: false,
-                paging: false,
-                info: false
-            });
-
-            $('.example-table-in-scenario table').DataTable({
-                searching: false,
-                ordering: false,
-                paging: false,
-                info: false
-            });
-
-            $('#evidence-table').DataTable(
-                    {
-                        searching: false,
-                        ordering: false,
-                        paging: false,
-                        info: false
-                    }
-            );
-
-
-            $(".scenario-docs .card-body table").wrap("<div class='table-responsive'></div>");
-
-            $("#requirements-tabs").tabs();
-            $("#test-tabs").tabs();
-
-            var requirementsTree = [{"text":"Reservations","type":"feature","href":"feature_reservations.html","nodes":[],"selectable":false,"tags":["","\u003cspan class\u003d\u0027feature-count\u0027\u003e2 scenarios\u003c/span\u003e"]}];
-
-            $('#tree').treeview({
-                data: requirementsTree,
-                enableLinks: true,
-                showTags: true,
-                expandIcon: "glyphicon glyphicon-folder-close",
-                collapseIcon: "glyphicon glyphicon-folder-open",
-                emptyIcon: "glyphicon glyphicon-book"
-            });
-
+        $('.scenario-result-table').DataTable({
+            "order": [[0, "asc",], [3, "asc",]],
+            "pageLength": 10,
+            "language": {
+                searchPlaceholder: "Filter",
+                search: ""
+            }
         });
-    </script>
 
-    <script>
-        $(document).ready(function () {
-            $(".scenario-docs p").html(function () {
-                var text = $(this).text().trim().split(" ");
-                var first = text.shift();
-                return (text.length > 0 ? "<strong>" + first + "</strong> " : first) + text.join(" ");
-            });
+        // Results table
+        $('#test-results-table').DataTable({
+            "order": [[0, "asc",], [3, "asc",]],
+            "pageLength": 10,
+            "lengthMenu": [[10, 25, 50, 100, 200, -1], [10, 25, 50, 100, 200, "All"]]
         });
+
+        $('#evidence-table').DataTable({
+                    searching: false,
+                    paging: false,
+                    info: false
+        });
+
+        $(".feature-coverage-table").DataTable({
+            searching: false,
+            paging: false,
+            info: false
+        });
+
+        $(".feature-coverage-table-with-pagination").DataTable({
+            order: [[0, "asc",]],
+            pageLength: 10,
+            language: {
+                searchPlaceholder: "Filter",
+                search: ""
+            }
+        });
+    });
     </script>
 </head>
 
@@ -139,366 +118,329 @@
     </div>
 </div>
 
-
 <div class="middlecontent">
+
+
     <div id="contenttop">
         <div class="middlebg">
-            <span class="breadcrumbs">
-            <a href='index.html'>Home</a> > <a href="capabilities.html">Requirements</a>
-
-
-
-                > <span class="truncate-40">Reservations</span>
-
-            </span>
+        <span class="breadcrumbs"><a href="index.html">Home</a>
+                > Feature 
+                > <span
+                    class="truncate-60">Reservations</span>
+        </span>
         </div>
         <div class="rightbg"></div>
     </div>
+
     <div class="clr"></div>
-
     <!--/* starts second table*/-->
-
 <div>
     <ul class="nav nav-tabs" role="tablist">
-        <li >
-            <a href="index.html"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
         </li>
         <li >
             <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
         </li>
-        <li class="active">
-            <a href="#"><i class="fa fa-comments-o"></i> Features</a>
+        <li >
+            <a href="requirement_type_feature.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 26-09-2021 23:11</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 27-09-2021 09:32</span>
     <br style="clear:left"/>
 </div>
-
     <div class="clr"></div>
-
     <div id="beforetable"></div>
     <div id="results-dashboard">
-        <div class="table">
-                <div class=row">
-                    <div class="col-sm-12">
-                        <div>
-                            <div clas="table">
-                                <div class="row">
-                                    <div class="col-sm-8">
-                                    <span>
-                                            <h2><i class="fa fa-book"></i> Feature:  Reservations</h2>
-                                        </span>
-                                </div>
-                                    <div class="col-sm-4">
-                                        <span class="feature-tags">
-                                                <p class="tag">
-                                                    <span class="badge tag-badge" style="background:default;">
-                                                        <i class="fa fa-tag"></i>&nbsp;<a class="tagLink"
-                                                                                          style="background:default;"
-                                                                                          href="tag_tag2.html">Tag2
-                                                        (tag)</a>
-                                                    </span>
-                                                </p>
-                                                <p class="tag">
-                                                    <span class="badge tag-badge" style="background:default;">
-                                                        <i class="fa fa-tag"></i>&nbsp;<a class="tagLink"
-                                                                                          style="background:default;"
-                                                                                          href="tag_tag.html">Tag
-                                                        (tag)</a>
-                                                    </span>
-                                                </p>
-                                        </span>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                            <div class="requirementNarrativeTitle">
-                                
-                            </div>
+        <div class="middlb">
+            <div class="table">
 
-                        </div>
-                    </div>
+                <h2><i class='fa fa-tags'></i> Feature: Reservations</h2>
+                <table class='overview'>
+                    <tr>
+                        <td width="375px" valign="top">
+                            <div class="test-count-summary">
+                                <div class="test-count-title">
+                                2 test scenarios 
+                                 |
+                                    <a href="feature_reservations.csv" title="Download CSV"> <i class="fa fa-download"
+                                                                                    title="Download CSV"></i></a>
 
 
-            <div class="row">
-                <div class="col-sm-12">
-
-                    <!-- Requirements result tabs -->
-                    <ul class="nav nav-tabs">
-                        <li class="active">
-                            <a data-toggle="tab" href="#specs"><i class="fas fa-comments"></i> Specifications</a>
-                        </li>
-                        <li>
-                            <a data-toggle="tab" href="#results"><i class="fas fa-tachometer-alt"></i> Test Results</a>
-                        </li>
-                    </ul>
-
-                    <!-- Specifications and Results tabs -->
-                    <div class="card border">
-                        <div class="tab-content" id="pills-tabContent">
-                            <div id="specs" class="tab-pane fade in active">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-
-
-                                            <h3>Scenarios</h3>
-
-                                            <div id="toc">
-                                                <table class="table" id="toc-table">
-                                                        <tr>
-                                                            <td style="width:99%;" class="toc-title"><a href="#d2c7f6be09a496f48dbe6a88dd175a28a4708cf76a89142ffb954be296b78ecf">Home Page</a>
-                                                                     (1 example)
-
-                                                            </td>
-                                                            <td style="width:1%;"><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i>
-                                                               
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style="width:99%;" class="toc-title"><a href="#9d6322c1f4d9d3f38aed8bfbe0b2bcadf66ad82c008476fa62541fa069138e94">Login</a>
-                                                                     (1 example)
-
-                                                            </td>
-                                                            <td style="width:1%;"><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i>
-                                                               
-                                                            </td>
-                                                        </tr>
-                                                </table>
-
-                                            </div>
-
-                                            <h3>Scenario details</h3>
-
-
-                                                <div class="scenario-docs card" id="d2c7f6be09a496f48dbe6a88dd175a28a4708cf76a89142ffb954be296b78ecf">
-                                                    <div class="scenario-docs card-header success" style="min-height:1.5em;">
-                                                        <div>
-                                                            <span class="scenario-heading">
-                                                                Home Page
-                                                            </span>
-                                                            <span class="scenario-result-icon">
-                                                                
-
-                                                                    <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="scenario-report-badges">
-                                                                <span class="scenario-report-badge" style="float:right;"><a href='reservations_home_page.html' class='badge more-details'>Test Results</a></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="scenario-docs card-body">
-                                                            <p>Given the user {client} is on the browser</p>
-                                                            <p>When the user enters the home page</p>
-                                                            <p>Then the user validates that he is on the home page {home}</p>
-                                                        <div class="examples">
-                                                            <p><p>Examples:</p>
-<div class='example-table-in-scenario'><table>
-<thead>
-<tr><th>client</th><th>home</th><th></th></tr>
-</thead>
-<tbody>
-<tr><td>Rafael</td><td>Demo Script Test drive - PHPTRAVELS</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
-</tbody>
-</table></div>
-</p>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="scenario-docs card" id="9d6322c1f4d9d3f38aed8bfbe0b2bcadf66ad82c008476fa62541fa069138e94">
-                                                    <div class="scenario-docs card-header failure" style="min-height:1.5em;">
-                                                        <div>
-                                                            <span class="scenario-heading">
-                                                                Login
-                                                            </span>
-                                                            <span class="scenario-result-icon">
-                                                                
-
-                                                                    <i class='fa fa-times-circle failure-icon ' title='FAILURE'></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="scenario-report-badges">
-                                                                <span class="scenario-report-badge" style="float:right;"><a href='reservations_login.html' class='badge more-details'>Test Results</a></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="scenario-docs card-body">
-                                                            <p>Given the user {vclient} is in the home page</p>
-                                                            <p>When the user looks for option Front-End Home Page</p>
-                                                            <p>And the user enters the Front-End Home Page {fendpage}</p>
-                                                            <p>And the user enters credentials and logs in</p>
-                                                            <p>Then the user validates that the username {username} on the user home page</p>
-                                                        <div class="examples">
-                                                            <p><p>Examples:</p>
-<div class='example-table-in-scenario'><table>
-<thead>
-<tr><th>vclient</th><th>fendpage</th><th>username</th><th></th></tr>
-</thead>
-<tbody>
-<tr><td>Antonio</td><td>https://www.phptravels.net/</td><td>Demois</td><td><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></td></tr>
-</tbody>
-</table></div>
-</p>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
 
-                            <div id="results" class="tab-pane fade">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-sm-4">
+                            <div>
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                        <a data-toggle="tab" href="#summary"><i class="fas fa-home"></i> Summary</a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="tab" href="#tests"><i class="fas fa-tachometer-alt"></i> Test
+                                            Results</a>
+                                    </li>
+                                </ul>
 
-                                            <div style="width:300px;" class="chart-container automated-and-manual-results">
-                                                <div class="ct-chart ct-square"></div>
-                                            </div>
-                                            <script>
 
-                                                var labels = ['50%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '50%', ' ', ' ', ' ', ' ', ' '];
-                                                // Our series array that contains series objects or in this case series data arrays
+                                <div class="card border">
+                                    <div class="tab-content" id="pills-tabContent">
+                                        <div id="summary" class="tab-pane fade in active">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                            <div style="width:300px;"
+                                                                 class="chart-container automated-and-manual-results">
+                                                                <div class="ct-chart ct-square"></div>
+                                                            </div>
+                                                            <script>
 
-                                                var series = [{meta: 'Passing tests (automated)', value: 1}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 1}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
+                                                                var labels = ['100%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
+                                                                // Our series array that contains series objects or in this case series data arrays
 
-                                                // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
-                                                // as you saw in the previous example
-                                                var options = {
-                                                    width: 350,
-                                                    height: 300
-                                                };
+                                                                var series = [{meta: 'Passing tests (automated)', value: 2}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
 
-                                                $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-                                                    new Chartist.Pie('.ct-chart', {
-                                                        series: series,
-                                                        labels: labels,
-                                                    }, {
-                                                        donut: true,
-                                                        donutWidth: 60,
-                                                        donutSolid: true,
-                                                        startAngle: 270,
-                                                        showLabel: true
-                                                    }, options);
-                                                });
+                                                                // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
+                                                                // as you saw in the previous example
+                                                                var options = {
+                                                                    width: 350,
+                                                                    height: 300
+                                                                };
 
-                                            </script>
-                                        </div>
-                                        <div class="col-sm-8">
 
-                                        <table class="table">
-                                            <thead>
-                                            <tr>
-                                                <th scope="col">Scenario Results (including rows of test data)</th>
-                                                <th scope="col" colspan="2" class="automated-stats">
-                                                    Automated
-                                                </th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr>
+                                                                new Chartist.Pie('.ct-chart', {
+                                                                    series: series,
+                                                                    labels: labels
+                                                                }, {
+                                                                    plugins: [Chartist.plugins.tooltip()],
+                                                                    donut: true,
+                                                                    donutWidth: 60,
+                                                                    donutSolid: true,
+                                                                    startAngle: 270,
+                                                                    showLabel: true
+                                                                }, options);
+
+
+                                                                $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                                                                    new Chartist.Pie('.ct-chart', {
+                                                                        series: series,
+                                                                        labels: labels
+                                                                    }, {
+                                                                        plugins: [Chartist.plugins.tooltip()],
+                                                                        donut: true,
+                                                                        donutWidth: 60,
+                                                                        donutSolid: true,
+                                                                        startAngle: 270,
+                                                                        showLabel: true
+                                                                    }, options);
+                                                                });
+
+
+                                                            </script>
+                                                    </div>
+                                                    <div class="col-sm-8">
+
+                                                        <table class="table">
+                                                            <thead>
+                                                            <tr>
+                                                                <th scope="col">Scenario Results (including rows of test
+                                                                    data)
+                                                                </th>
+                                                                <th scope="col" colspan="2" class="automated-stats">
+                                                                    Automated
+                                                                </th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            <tr>
                                                                     <td class="aggregate-result-count">
                                                                         <a href="context_feature_cl_reservations_result_success.html"><i
                                                                                 class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing</a>
                                                                     </td>
-                                                <td class="automated-stats">1</td>
-                                                <td class="automated-stats">50%</td>
-                                            </tr>
-                                            <tr>
+                                                                <td class="automated-stats">2</td>
+                                                                <td class="automated-stats">100%</td>
+                                                            </tr>
+                                                            <tr>
                                                                     <td class="aggregate-result-count"><i
                                                                             class='fa fa-stop-circle-o pending-icon'></i>&nbsp;Pending
                                                                     </td>
-                                                <td class="automated-stats">0</td>
-                                                <td class="automated-stats"> </td>
-                                            </tr>
-                                            <tr>
+                                                                <td class="automated-stats">0</td>
+                                                                <td class="automated-stats"> </td>
+                                                            </tr>
+                                                            <tr>
                                                                 <td class="aggregate-result-count"><i
                                                                         class='fa fa-ban ignored-icon'></i>&nbsp;Ignored
                                                                 </td>
-                                                <td class="automated-stats">0</td>
-                                                <td class="automated-stats"> </td>
-                                            </tr>
-                                            <tr>
+                                                                <td class="automated-stats">0</td>
+                                                                <td class="automated-stats"> </td>
+                                                            </tr>
+                                                            <tr>
                                                                 <td class="aggregate-result-count"><i
                                                                         class='fa fa-fast-forward skip-icon'></i>&nbsp;Skipped
                                                                 </td>
-                                                <td class="automated-stats">0</td>
-                                                <td class="automated-stats"> </td>
-                                            </tr>
-                                            <tr>
-                                                                    <td colspan="3"><a href="context_feature_cl_reservations_result_broken.html"><i
+                                                                <td class="automated-stats">0</td>
+                                                                <td class="automated-stats"> </td>
+                                                            </tr>
+                                                            <tr>
+                                                                    <td colspan="3"><a
+                                                                            href="context_feature_cl_reservations_result_broken.html"><i
                                                                             class='fa fa-times failure-icon'></i>&nbsp;<em>Unsuccessful</em></a>
                                                                     </td>
-                                            </tr>
-
-                                            <tr>
-                                                                    <td class="aggregate-result-count indented-error-category">
-                                                                        <a href="context_feature_cl_reservations_result_failure.html"><i
-                                                                                class='fa fa-times-circle failure-icon'></i>&nbsp;Failed</a>
-                                                                    </td>
-                                                <td class="automated-stats">1</td>
-                                                <td class="automated-stats">50%</td>
-                                            <tr>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="aggregate-result-count indented-error-category">
+                                                                    <i
+                                                                            class='fa fa-times-circle failure-icon'></i>&nbsp;Failed
+                                                                </td>
+                                                                <td class="automated-stats">0</td>
+                                                                <td class="automated-stats"> </td>
+                                                            <tr>
                                                                 <td class="aggregate-result-count indented-error-category">
                                                                     <i
                                                                             class='fa fa-exclamation-triangle error-icon'></i>&nbsp;Broken
                                                                 </td>
-                                                <td class="automated-stats">0</td>
-                                                <td class="automated-stats"> </td>
-                                            <tr>
+                                                                <td class="automated-stats">0</td>
+                                                                <td class="automated-stats"> </td>
+                                                            <tr>
                                                                 <td class="aggregate-result-count indented-error-category">
                                                                     <i
                                                                             class='fa fa-chain-broken compromised-icon'></i>&nbsp;Compromised
                                                                 </td>
-                                                <td class="automated-stats">0</td>
-                                                <td class="automated-stats"> </td>
-                                            </tr>
-                                            <tr class="summary-stats">
-                                                <td class="aggregate-result-count">Total</td>
-                                                <td class="automated-stats">2</td>
-                                                <td class="automated-stats"></td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    </div>
+                                                                <td class="automated-stats">0</td>
+                                                                <td class="automated-stats"> </td>
+                                                            </tr>
+                                                            <tr class="summary-stats">
+                                                                <td class="aggregate-result-count">Total</td>
+                                                                <td class="automated-stats">2</td>
+                                                                <td class="automated-stats"></td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
 
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <table class="table">
-                                                    <thead>
-                                                    <tr>
-                                                        <th>Execution Time</th>
-                                                        <th>Clock Time</th>
-                                                        <th>Fastest Test</th>
-                                                        <th>Slowest Test</th>
-                                                        <th>Average Execution Time</th>
-                                                    </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                    <tr>
-                                                        <td>29s</td>
-                                                        <td> 4h  13m 10s</td>
-                                                        <td>14s</td>
-                                                        <td>15s</td>
-                                                        <td>14s</td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <table class="table">
+                                                            <thead>
+                                                            <tr>
+                                                                <th>Execution Time</th>
+                                                                <th>Clock Time</th>
+                                                                <th>Fastest Test</th>
+                                                                <th>Slowest Test</th>
+                                                                <th>Average Execution Time</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            <tr>
+                                                                <td>31s</td>
+                                                                <td>13s</td>
+                                                                <td>13s</td>
+                                                                <td>17s</td>
+                                                                <td>15s</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <h3>Functional Coverage Overview</h3>
+
+
+                                                                <h4>Features</h4>
+
+                                                                <table class="table feature-coverage-table" id="Feature">
+                                                                    <thead>
+                                                                    <tr>
+                                                                        <th>Feature</th>
+                                                                        <th style="width:7.5em;">Scenarios</th>
+                                                                        <th style="width:7.5em;">% Pass</th>
+                                                                        <th style="width:7.5em;">Result</th>
+                                                                        <th>Coverage</th>
+                                                                    </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                    <a href="feature_reservations.html">Reservations</a>
+                                                                            </td>
+                                                                            <td>2</td>
+                                                                            <td>100%</td>
+                                                                            <td>
+                                                                                    <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="progress">
+                                                                                        <div class="progress-bar"
+                                                                                             role="progressbar"
+                                                                                             style="width: 100%; background-color: #30cb23"
+                                                                                             aria-valuenow="2"
+                                                                                             title="100% success"
+                                                                                             aria-valuemin="0"
+                                                                                             aria-valuemax="100">
+                                                                                        </div>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                    Bookings
+                                                                            </td>
+                                                                            <td>0</td>
+                                                                            <td>0%</td>
+                                                                            <td>
+                                                                                    <i class="fa fa-stop-circle-o pending-icon"></i>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="progress">
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <h3>Tags</h3>
+
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <div>
+                                                                    <a href="tag_tag1.html">
+                                                                        <span class="badge"
+                                                                              style="background-color:#1D9918; margin:1em;padding:4px;"><i
+                                                                                class="fa fa-tag"></i> Tag1&nbsp;&nbsp;&nbsp;1</span>
+                                                                    </a>
+                                                                    <a href="tag_tag.html">
+                                                                        <span class="badge"
+                                                                              style="background-color:#1D9918; margin:1em;padding:4px;"><i
+                                                                                class="fa fa-tag"></i> Tag&nbsp;&nbsp;&nbsp;2</span>
+                                                                    </a>
+                                                                    <a href="tag_tag2.html">
+                                                                        <span class="badge"
+                                                                              style="background-color:#1D9918; margin:1em;padding:4px;"><i
+                                                                                class="fa fa-tag"></i> Tag2&nbsp;&nbsp;&nbsp;1</span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-
-
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <h3><i class="fas fa-cogs"></i> Automated Tests</h3>
+                                        <div id="tests" class="tab-pane fade">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <h3><i class="fas fa-cogs"></i> Automated Tests</h3>
 
                                             <table class="scenario-result-table table" id="scenario-results">
                                                 <thead>
                                                 <tr>
+                                                    <th>feature</th>
                                                     <th class="test-name-column">Scenario</th>
                                                     <th>Steps</th>
                                                     <th>Start Time</th>
@@ -509,58 +451,66 @@
                                                 <tbody>
                                                 <tr class="scenario-result SUCCESS">
                                                     <td>
-                                                            <a href="reservations_home_page.html">Home Page</a>
+                                                            <a href="feature_features_sl_reservations.html">Reservations</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="reservations_home_page.html">Home Page</a>
                                                     </td>
                                                     <td>3</td>
-                                                    <td>23:11:05</td>
-                                                    <td>00:14</td>
-                                                    <td>
-                                                            <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
-                                                                style="display:none">SUCCESS</span>
-                                                    </td>
+                                                    <td>09:28:52</td>
+                                                    <td>00:13</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
                                                 </tr>
-                                                <tr class="scenario-result FAILURE">
+                                                <tr class="scenario-result SUCCESS">
                                                     <td>
-                                                            <a href="reservations_login.html">Login</a>
-                                                               (1 example)
+                                                            <a href="feature_features_sl_reservations.html">Reservations</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="reservations_login.html">Login</a>
                                                     </td>
                                                     <td>5</td>
-                                                    <td>03:24:15</td>
-                                                    <td>00:15</td>
-                                                    <td>
-                                                            <i class='fa fa-times-circle failure-icon ' title='FAILURE'></i> <span
-                                                                style="display:none">FAILURE</span>
-                                                    </td>
+                                                    <td>09:29:05</td>
+                                                    <td>00:17</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
                                                 </tr>
                                                 </tbody>
                                             </table>
 
-                                            </div>
-                                        </div>
+                                                    </div>
+                                                </div>
 
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <h3><i class="fas fa-edit"></i> Manual Tests</h3>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <h3><i class="fas fa-edit"></i> Manual Tests</h3>
 
                                                 No manual tests were recorded
 
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        </td>
+
+                    </tr>
+                </table>
+
             </div>
         </div>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <span class="version">Serenity BDD version 2.0.30</span>
-                    </div>
-                </div>
-            </div>
+    </div>
+</div>
+<div id="beforefooter"></div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <span class="version">Serenity BDD version 2.0.30</span>
+        </div>
+    </div>
+</div>
+
+
 </body>
 </html>
